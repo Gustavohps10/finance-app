@@ -1,25 +1,46 @@
 import styled, { DefaultTheme, css } from 'styled-components'
 import { ButtonProps } from '.'
 
-const buttonColors = (theme: DefaultTheme, buttonColor = 'primary') =>
+export interface ButtonContainerProps {
+  $color?: 'primary' | 'danger'
+  $outline?: 'filled' | 'outlined'
+}
+
+const BUTTON_COLORS = (
+  theme: DefaultTheme,
+  color: ButtonContainerProps['$color'] = 'primary',
+) =>
   ({
-    primary: css`
-      color: ${theme.color['gray-100']};
-      background: ${theme.color['green-500']};
+    primary: theme.color['green-500'],
+    danger: theme.color['red-500'],
+  })[color]
 
-      &:not(:disabled):hover {
-        background: ${theme.color['green-700']};
+const variantStyles = (
+  theme: DefaultTheme,
+  outline: ButtonContainerProps['$outline'] = 'filled',
+  color: ButtonContainerProps['$color'] = 'primary',
+) =>
+  ({
+    filled: css`
+      color: ${theme.color.white};
+      background: ${BUTTON_COLORS(theme, color)};
+      border: none;
+
+      &:hover {
+        filter: brightness(85%);
       }
     `,
-    danger: css`
-      color: ${theme.color['gray-100']};
-      background: ${theme.color['red-500']};
+    outlined: css`
+      color: ${BUTTON_COLORS(theme, color)};
+      background: transparent;
+      border: 1px solid ${BUTTON_COLORS(theme, color)};
 
-      &:not(:disabled):hover {
-        background: ${theme.color['red-700']};
+      &:hover {
+        color: ${theme.color.white};
+        background: ${BUTTON_COLORS(theme, color)};
       }
     `,
-  })[buttonColor]
+  })[outline]
 
 export const ButtonContainer = styled.button<ButtonProps>`
   display: flex;
@@ -27,8 +48,6 @@ export const ButtonContainer = styled.button<ButtonProps>`
   justify-content: center;
   gap: 8px;
 
-  border: none;
-  outline: none;
   border-radius: ${(props) => props.theme.borderRadius.medium};
   transition: all 0.2s ease;
 
@@ -41,6 +60,6 @@ export const ButtonContainer = styled.button<ButtonProps>`
     cursor: not-allowed;
   }
 
-  //colors
-  ${({ theme, color }) => buttonColors(theme, color)}
+  //variants
+  ${({ theme, $outline, $color }) => variantStyles(theme, $outline, $color)}
 `
