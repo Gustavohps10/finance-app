@@ -43,6 +43,7 @@ export function NewTransactionModal() {
       <S.Overlay />
       <S.Content>
         <Dialog.Title>Nova Transação</Dialog.Title>
+        <Dialog.Description />
         <S.CloseButton>
           <X size={24} />
         </S.CloseButton>
