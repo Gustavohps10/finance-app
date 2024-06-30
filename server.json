@@ -39,62 +39,6 @@
       "type": "outcome",
       "createdAt": "2022-08-11T21:24:24.225Z",
       "id": 5
-    },
-    {
-      "description": "Teste",
-      "category": "TESTE",
-      "price": 120,
-      "type": "outcome",
-      "createdAt": "2024-06-29T11:42:49.827Z",
-      "id": 6
-    },
-    {
-      "description": "New transaction test",
-      "category": "test",
-      "price": 123,
-      "type": "outcome",
-      "createdAt": "2024-06-29T11:49:45.385Z",
-      "id": 7
-    },
-    {
-      "description": "technology",
-      "category": "TESTE",
-      "price": 120,
-      "type": "income",
-      "createdAt": "2024-06-29T11:52:24.559Z",
-      "id": 8
-    },
-    {
-      "description": "123",
-      "category": "123",
-      "price": 123,
-      "type": "income",
-      "createdAt": "2024-06-29T12:09:38.164Z",
-      "id": 9
-    },
-    {
-      "description": "ola mundo",
-      "category": "111",
-      "price": 111,
-      "type": "income",
-      "createdAt": "2024-06-29T12:10:33.725Z",
-      "id": 10
-    },
-    {
-      "description": "technology",
-      "category": "TESTE",
-      "price": 120,
-      "type": "outcome",
-      "createdAt": "2024-06-30T05:30:28.996Z",
-      "id": 11
-    },
-    {
-      "description": "abcdefgh",
-      "price": 123,
-      "category": "123",
-      "type": "income",
-      "createdAt": "2024-06-30T05:58:43.658Z",
-      "id": 12
     }
   ]
 }
