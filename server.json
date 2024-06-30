@@ -87,6 +87,14 @@
       "type": "outcome",
       "createdAt": "2024-06-30T05:30:28.996Z",
       "id": 11
+    },
+    {
+      "description": "abcdefgh",
+      "price": 123,
+      "category": "123",
+      "type": "income",
+      "createdAt": "2024-06-30T05:58:43.658Z",
+      "id": 12
     }
   ]
 }
