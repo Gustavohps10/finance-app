@@ -79,6 +79,14 @@
       "type": "income",
       "createdAt": "2024-06-29T12:10:33.725Z",
       "id": 10
+    },
+    {
+      "description": "technology",
+      "category": "TESTE",
+      "price": 120,
+      "type": "outcome",
+      "createdAt": "2024-06-30T05:30:28.996Z",
+      "id": 11
     }
   ]
 }
